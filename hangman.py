@@ -40,20 +40,27 @@ def check_win(g):
     return False
 
 
-def check_mistake():
+def check_mistake(w, g):
+    for i in w:
+        if i == g:
+            return True
+    return False    
+    
+    
+
 
 
 
 
 def game():
     progress = True
-    word = ['orange']
+    word = ['apple']
     lifes = 3
 
     word_in_play = get_word(word)
     template = start_template(word_in_play)
     welcome_speech(list_to_string_convert(template))
-
+    lifes = 3
 
     while progress:
         user_guess = user_input()
@@ -61,9 +68,22 @@ def game():
         guessed = list_to_string_convert(template)
         print(f'Результат: {guessed}')
         progress = check_win(guessed)
+        
 
         if not check_mistake(word_in_play, user_guess):
+            print(f'Осталось {lifes} попытки')
+            lifes -= 1
 
+        if lifes == 0:
+            print('Ты проиграл')
+            break
+
+        if not progress:
+            print('Ты выиграл')
+
+
+
+game()
 
 
 
