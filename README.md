@@ -53,3 +53,16 @@ for ПЕРЕМЕННАЯ in СПИСОК/КОРТЕЖ/СТРОКА/range:
 def ИМЯ_ФУНКЦИИ(АРГУМЕНТ):
   тело функции
 ```
+**Модули**
+1)import module 
+  module.f()
+  
+2)from module import * 
+  f()
+  Плохой способ
+  
+3)from module import function as f
+  f()
+
+  
+
