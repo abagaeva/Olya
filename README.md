@@ -67,9 +67,11 @@ def ИМЯ_ФУНКЦИИ(АРГУМЕНТ):
   Плохой способ
   
   
+  
 3)from module import function as f
 
   f()
+  
   
   
   
