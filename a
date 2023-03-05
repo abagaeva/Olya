@@ -1,0 +1,10 @@
+a = int(input('Введите количество рублей'))
+b = int(input('Введите количество копеек'))
+c = int(input('Введите количество пирожков'))
+    if a < 0 and b < 0 and n< 0:
+        print('NO')
+price = (100*a)+b
+f = price*n
+rub = f//100
+cop = f%100
+print(rub, cop)
